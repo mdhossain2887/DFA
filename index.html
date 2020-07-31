@@ -23,6 +23,18 @@
                     $(this).css("color","blueviolet");
             });
         })
+        $(function() {
+    $('a[href*=\\#]:not([href=\\#])').on('click', function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
+});
 </script>
 <style>
 ul {
@@ -84,32 +96,40 @@ bodY{
         font-size: 30px;
     }
     p{
-        font-size: 22px;
+        font-size: 30px;
         font-family: Times;
         margin-left: 15px;
     }
     #address{
         margin-left: 15px;
-        font-size: 20px;
+        font-size: 30px;
+    }
+    #logo{
+        width: 95px;
+        height: 93px;
+        float: right;
+        margin-left: 10px;
+        
     }
 
 </style>
 </head>
 <body>
-<div>
-    <h1 id="heading">Halal Real Estate </h1>
+<div id="home">
+    <img src="logo.jpg" id="logo">
+    <h1 id="heading"> Real Estate </h1>
 </div>
 <div>
     <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">News</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">Mission</a></li>
-        <li><a href="">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
 </div>
-<div>
+<div id="mission">
     <h1>Our mission </h1>
     <p>
         Advanced search algorithms No word limit & no use restrictions Immediate 
@@ -127,16 +147,35 @@ bodY{
     </p>
     <img src="df.jpg">
 </div>
-<div id="contact">
-    <h1>Contact us</h1>
-        <address id="address">
-        Feel free to contact us through email or phone <br>
-        <a href="mailto:arifreza061@gmail.com">Email : arifreza061@gmail.com</a><br>
-        Or<br>
-        Call at : +1(347)284-7001<br>
-        </address>
 
-    </div> 
+    <div id="news">
+        <h1>News</h1>
+          <p>
+            Advanced search algorithms No word limit & no use restrictions Immediate results & no
+             waiting No charges & no registrations; Essay Typer from EssayToolBox employs AI search
+              algorithms and iAdvanced search algorithms No word limit & no use restrictions 
+              Immediate results & no waiting No charges & no registrations; 
+          </p>
+    </div>
+    <div id="about">
+        <h1>About us</h1>
+          <p>
+            Advanced search algorithms No word limit & no use restrictions Immediate results & no
+             waiting No charges & no registrations; Essay Typer from EssayToolBox employs AI search
+              algorithms and iAdvanced search algorithms No word limit & no use restrictions 
+              Immediate results & no waiting No charges & no registrations; 
+          </p>
+    </div>
+    <div id="contact">
+        <h1>Contact us</h1>
+            <address id="address">
+            Feel free to contact us through email or phone <br>
+            <a href="mailto:arifreza061@gmail.com">Email : arifreza061@gmail.com</a><br>
+            Or<br>
+            Call at : +1(347)284-7001<br>
+            </address>
+    
+        </div> 
     <div id="footer" >
     <br>
 <h3>Follow us</h3>
