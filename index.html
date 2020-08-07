@@ -35,6 +35,18 @@
         }
     });
 });
+$(document).ready(function(){
+                $("#table tr").mouseenter(function(){
+                 $(this).css("border","2px solid purple");
+                 $(this).css("background-color","blue");
+                 $(this).css("color","purple");
+                });
+                $("#table tr").mouseleave(function(){
+                $(this).css("border","1px solid grey");
+                $(this).css("background-color","rgba(32, 207, 108, 0.841");
+                $(this).css("color","black");
+            });
+        })
 </script>
 <style>
 ul {
